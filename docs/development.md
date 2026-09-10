@@ -1,7 +1,27 @@
-# AegisAI Development Guide
+# AegisAI Development Standards
 
-This document will contain development instructions for AegisAI.
+## Python
 
-The project will be developed incrementally.
+AegisAI uses Python 3.11 as its primary Python version.
 
-Each phase should produce a working and testable result before the next phase begins.
+Supported Python versions are:
+
+- Python 3.11
+- Python 3.12
+
+Python dependencies are managed through `pyproject.toml` and `uv.lock`.
+
+## Code Quality
+
+All Python code should pass:
+
+- Ruff linting
+- Ruff formatting
+- Pyright type checking
+
+Run:
+
+```powershell
+ruff check .
+ruff format --check .
+pyright
