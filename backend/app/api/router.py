@@ -1,0 +1,11 @@
+"""API route aggregation for AegisAI."""
+
+from fastapi import APIRouter
+
+from app.api.routes.system import router as system_router
+
+api_router = APIRouter(prefix="/api/v1")
+
+api_router.include_router(system_router)
+
+__all__ = ["api_router"]
